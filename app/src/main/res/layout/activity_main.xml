@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#f6f6f6"
+        tools:context=".MainActivity">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+           >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="6"
+                android:paddingRight="14dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/totalAmtL1"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/dark_black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:text="@string/str_atm_amount" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:id="@+id/tvMainTotalAmt"
+                        android:layout_marginTop="5dp"
+                        android:text="Rs. 100000" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/totalAmtL2"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/dark_black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:text="@string/str_rs_2000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvMainTwoTh"
+                        android:layout_marginTop="5dp"
+                        android:text="25" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/totalAmtL3"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/dark_black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:text="@string/str_rs_500" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvMainFiveHn"
+                        android:layout_marginTop="5dp"
+
+                        android:text="70" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/totalAmtL4"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/dark_black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:text="@string/str_rs_200" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvMainTwoHn"
+                        android:layout_marginTop="5dp"
+                        android:text="65" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/totalAmtL5"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/dark_black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:text="@string/str_rs_100" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvMainOneHn"
+                        android:layout_marginTop="5dp"
+                        android:text="20" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name_text_input"
+            android:paddingHorizontal="15dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtEnterAmount"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:layout_height="wrap_content"
+                android:hint="@string/str_enter_amount" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:layout_marginHorizontal="30dp"
+            android:id="@+id/btnWithdraw"
+            android:stateListAnimator="@null"
+            android:outlineSpotShadowColor="@color/purple_200"
+            android:layout_marginTop="16dp"
+            android:text="@string/str_withdraw" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_last_trans"
+            android:paddingHorizontal="17dp"
+            android:textColor="@color/dark_black"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_marginTop="18dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardUseCompatPadding="true"
+            app:cardPreventCornerOverlap="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="6"
+                android:paddingRight="14dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/lastAmtL2"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_atm_amount"
+                        android:gravity="center"
+                        android:textColor="@color/dark_black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvLastAmt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="12dp"
+                        android:gravity="start"
+                        android:layout_marginTop="5dp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lastAmtL2000"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/dark_black"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:text="@string/str_rs_2000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/tvLastTwoTh"
+                        android:gravity="center"
+                        android:text="-"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lastAmt500"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/dark_black"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:text="@string/str_rs_500" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/tvLastFiveHn"
+                        android:gravity="center"
+                        android:text="-"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lastAmt200"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/dark_black"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:text="@string/str_rs_200" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/tvLastTwoHn"
+                        android:gravity="center"
+                        android:text="-"
+                       />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lastAmt100"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/dark_black"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:text="@string/str_rs_100" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/tvLastOneHn"
+                        android:gravity="center"
+                        android:text="-"
+                      />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_your_trans"
+            android:paddingHorizontal="17dp"
+            android:textColor="@color/dark_black"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_marginTop="18dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingRight="14dp"
+                android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:textSize="12sp"
+                    android:textColor="@color/dark_black"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="@string/str_atm_amount"
+                    />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:textColor="@color/dark_black"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="@string/str_rs_2000" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:textColor="@color/dark_black"
+                    android:textStyle="bold"
+                    android:gravity="center"
+
+                    android:text="@string/str_rs_500" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:textColor="@color/dark_black"
+                    android:textStyle="bold"
+                    android:gravity="center"
+
+                    android:text="@string/str_rs_200" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:textColor="@color/dark_black"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="@string/str_rs_100" />
+            </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    tools:listitem="@layout/item_transaction"
+                    android:id="@+id/recView" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</layout>
